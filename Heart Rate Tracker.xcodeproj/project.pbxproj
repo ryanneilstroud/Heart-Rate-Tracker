@@ -7,14 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6249CD3E26C2D03400C63692 /* KeyboardLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6249CD3D26C2D03400C63692 /* KeyboardLayoutConstraint.swift */; };
+		627D6B0D26C2B6B5000D8D3B /* Stepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627D6B0C26C2B6B5000D8D3B /* Stepper.swift */; };
 		62BA364226C21E5B0050013A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BA364126C21E5B0050013A /* AppDelegate.swift */; };
 		62BA364426C21E5B0050013A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BA364326C21E5B0050013A /* SceneDelegate.swift */; };
-		62BA364626C21E5B0050013A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BA364526C21E5B0050013A /* ViewController.swift */; };
+		62BA364626C21E5B0050013A /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BA364526C21E5B0050013A /* LogInViewController.swift */; };
 		62BA364926C21E5B0050013A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62BA364726C21E5B0050013A /* Main.storyboard */; };
 		62BA364B26C21E5B0050013A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62BA364A26C21E5B0050013A /* Assets.xcassets */; };
 		62BA364E26C21E5B0050013A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62BA364C26C21E5B0050013A /* LaunchScreen.storyboard */; };
 		62BA365926C21E5B0050013A /* Heart_Rate_TrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BA365826C21E5B0050013A /* Heart_Rate_TrackerTests.swift */; };
 		62BA366426C21E5B0050013A /* Heart_Rate_TrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BA366326C21E5B0050013A /* Heart_Rate_TrackerUITests.swift */; };
+		62BA367226C21E940050013A /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BA367126C21E940050013A /* Coordinator.swift */; };
+		62BA367426C22E810050013A /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BA367326C22E810050013A /* Button.swift */; };
+		62BA367626C22F5B0050013A /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BA367526C22F5B0050013A /* TextField.swift */; };
+		62BA367826C2452F0050013A /* TakeHeartRateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BA367726C2452F0050013A /* TakeHeartRateViewController.swift */; };
+		62BA367C26C284B30050013A /* HeartRatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BA367B26C284B30050013A /* HeartRatesViewController.swift */; };
+		62BA368026C289840050013A /* HeartRatesNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BA367F26C289840050013A /* HeartRatesNavigationController.swift */; };
+		62BA368226C28E840050013A /* HeartRateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BA368126C28E840050013A /* HeartRateTableViewCell.swift */; };
+		62BA368426C298A10050013A /* FloatingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BA368326C298A10050013A /* FloatingButton.swift */; };
+		62BA368626C29C740050013A /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BA368526C29C740050013A /* API.swift */; };
+		62BA368826C2A8220050013A /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BA368726C2A8220050013A /* BaseViewController.swift */; };
+		62C2851D26C2D612004D9905 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C2851C26C2D612004D9905 /* AppError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,10 +48,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6249CD3D26C2D03400C63692 /* KeyboardLayoutConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardLayoutConstraint.swift; sourceTree = "<group>"; };
+		627D6B0C26C2B6B5000D8D3B /* Stepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stepper.swift; sourceTree = "<group>"; };
 		62BA363E26C21E5B0050013A /* Heart Rate Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Heart Rate Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		62BA364126C21E5B0050013A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		62BA364326C21E5B0050013A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		62BA364526C21E5B0050013A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		62BA364526C21E5B0050013A /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		62BA364826C21E5B0050013A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		62BA364A26C21E5B0050013A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		62BA364D26C21E5B0050013A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +64,17 @@
 		62BA365F26C21E5B0050013A /* Heart Rate TrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Heart Rate TrackerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		62BA366326C21E5B0050013A /* Heart_Rate_TrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Heart_Rate_TrackerUITests.swift; sourceTree = "<group>"; };
 		62BA366526C21E5B0050013A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		62BA367126C21E940050013A /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		62BA367326C22E810050013A /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		62BA367526C22F5B0050013A /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
+		62BA367726C2452F0050013A /* TakeHeartRateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeHeartRateViewController.swift; sourceTree = "<group>"; };
+		62BA367B26C284B30050013A /* HeartRatesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartRatesViewController.swift; sourceTree = "<group>"; };
+		62BA367F26C289840050013A /* HeartRatesNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartRatesNavigationController.swift; sourceTree = "<group>"; };
+		62BA368126C28E840050013A /* HeartRateTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartRateTableViewCell.swift; sourceTree = "<group>"; };
+		62BA368326C298A10050013A /* FloatingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingButton.swift; sourceTree = "<group>"; };
+		62BA368526C29C740050013A /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		62BA368726C2A8220050013A /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		62C2851C26C2D612004D9905 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,8 +127,13 @@
 			children = (
 				62BA364126C21E5B0050013A /* AppDelegate.swift */,
 				62BA364326C21E5B0050013A /* SceneDelegate.swift */,
-				62BA364526C21E5B0050013A /* ViewController.swift */,
+				62BA367126C21E940050013A /* Coordinator.swift */,
+				62BA368526C29C740050013A /* API.swift */,
 				62BA364726C21E5B0050013A /* Main.storyboard */,
+				6249CD3D26C2D03400C63692 /* KeyboardLayoutConstraint.swift */,
+				62C2851C26C2D612004D9905 /* AppError.swift */,
+				62BA367A26C280400050013A /* ViewControllers */,
+				62BA367926C280330050013A /* Components */,
 				62BA364A26C21E5B0050013A /* Assets.xcassets */,
 				62BA364C26C21E5B0050013A /* LaunchScreen.storyboard */,
 				62BA364F26C21E5B0050013A /* Info.plist */,
@@ -126,6 +157,30 @@
 				62BA366526C21E5B0050013A /* Info.plist */,
 			);
 			path = "Heart Rate TrackerUITests";
+			sourceTree = "<group>";
+		};
+		62BA367926C280330050013A /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				62BA367326C22E810050013A /* Button.swift */,
+				62BA367526C22F5B0050013A /* TextField.swift */,
+				62BA368126C28E840050013A /* HeartRateTableViewCell.swift */,
+				62BA368326C298A10050013A /* FloatingButton.swift */,
+				627D6B0C26C2B6B5000D8D3B /* Stepper.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		62BA367A26C280400050013A /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				62BA364526C21E5B0050013A /* LogInViewController.swift */,
+				62BA367726C2452F0050013A /* TakeHeartRateViewController.swift */,
+				62BA367B26C284B30050013A /* HeartRatesViewController.swift */,
+				62BA367F26C289840050013A /* HeartRatesNavigationController.swift */,
+				62BA368726C2A8220050013A /* BaseViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,9 +313,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				62BA364626C21E5B0050013A /* ViewController.swift in Sources */,
+				62BA368826C2A8220050013A /* BaseViewController.swift in Sources */,
+				627D6B0D26C2B6B5000D8D3B /* Stepper.swift in Sources */,
+				62BA367426C22E810050013A /* Button.swift in Sources */,
+				62BA367C26C284B30050013A /* HeartRatesViewController.swift in Sources */,
+				62C2851D26C2D612004D9905 /* AppError.swift in Sources */,
+				62BA367226C21E940050013A /* Coordinator.swift in Sources */,
+				62BA368026C289840050013A /* HeartRatesNavigationController.swift in Sources */,
+				62BA364626C21E5B0050013A /* LogInViewController.swift in Sources */,
+				62BA367626C22F5B0050013A /* TextField.swift in Sources */,
+				6249CD3E26C2D03400C63692 /* KeyboardLayoutConstraint.swift in Sources */,
+				62BA368226C28E840050013A /* HeartRateTableViewCell.swift in Sources */,
 				62BA364226C21E5B0050013A /* AppDelegate.swift in Sources */,
 				62BA364426C21E5B0050013A /* SceneDelegate.swift in Sources */,
+				62BA367826C2452F0050013A /* TakeHeartRateViewController.swift in Sources */,
+				62BA368626C29C740050013A /* API.swift in Sources */,
+				62BA368426C298A10050013A /* FloatingButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,7 +514,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ryanneilstroud.Heart-Rate-Tracker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -465,7 +533,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ryanneilstroud.Heart-Rate-Tracker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

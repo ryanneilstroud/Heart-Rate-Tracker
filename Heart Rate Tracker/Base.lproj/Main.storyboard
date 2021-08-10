@@ -1,24 +1,294 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wMR-Uk-RrE">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
+        <scene sceneID="8el-GF-qyL">
+            <objects>
+                <viewController id="wMR-Uk-RrE" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8JX-hg-TiO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="k8D-D7-Jw9"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="prU-NJ-17x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-641" y="88"/>
+        </scene>
+        <!--Log In View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LogInViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="LogInViewController" customModule="Heart_Rate_Tracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="V1z-jz-eo7">
+                                <rect key="frame" x="20" y="696" width="374" height="170"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aNn-dB-UZQ" customClass="TextField" customModule="Heart_Rate_Tracker" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="40"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Oyc-q9-kTn" customClass="TextField" customModule="Heart_Rate_Tracker" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="60" width="374" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="cmz-4o-5B3"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UBY-Px-EJO" customClass="Button" customModule="Heart_Rate_Tracker" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="120" width="374" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="lV7-SY-aKr"/>
+                                        </constraints>
+                                        <state key="normal" title="Log In"/>
+                                        <connections>
+                                            <action selector="login" destination="BYZ-38-t0r" eventType="touchUpInside" id="qdp-A3-pvs"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Oyc-q9-kTn" firstAttribute="height" secondItem="aNn-dB-UZQ" secondAttribute="height" id="UqM-jx-Wpj"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's get you logged in :)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0qy-Sz-LAu">
+                                <rect key="frame" x="20" y="94" width="374" height="37"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" name="PrimaryColor"/>
+                        <constraints>
+                            <constraint firstItem="0qy-Sz-LAu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="EsY-5I-DP5"/>
+                            <constraint firstItem="V1z-jz-eo7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="XNB-cZ-Qph"/>
+                            <constraint firstAttribute="bottom" secondItem="V1z-jz-eo7" secondAttribute="bottom" constant="30" id="Xay-JN-GpM" customClass="KeyboardLayoutConstraint" customModule="Heart_Rate_Tracker" customModuleProvider="target"/>
+                            <constraint firstItem="0qy-Sz-LAu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="a3M-Ef-YDh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="V1z-jz-eo7" secondAttribute="trailing" constant="20" id="s4z-dg-Tms"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0qy-Sz-LAu" secondAttribute="trailing" constant="20" id="yfe-Qr-Qxi"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="password" destination="Oyc-q9-kTn" id="AnD-ex-5kP"/>
+                        <outlet property="submitButton" destination="UBY-Px-EJO" id="khc-CG-1cS"/>
+                        <outlet property="username" destination="aNn-dB-UZQ" id="pe2-Xz-kV1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="34.782608695652179" y="87.723214285714278"/>
+        </scene>
+        <!--Take Heart Rate View Controller-->
+        <scene sceneID="Aqb-Dt-Vgd">
+            <objects>
+                <viewController storyboardIdentifier="TakeHeartRateViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="k0x-bh-GAm" customClass="TakeHeartRateViewController" customModule="Heart_Rate_Tracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iGx-MZ-aRp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="228" translatesAutoresizingMaskIntoConstraints="NO" id="Fju-2E-OtW">
+                                <rect key="frame" x="20" y="181" width="374" height="671"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's check that heart rate!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4N7-8d-t92">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="37"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Smc-5c-dG8" customClass="Stepper" customModule="Heart_Rate_Tracker" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="265" width="374" height="128"/>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DDc-Dj-Kje" customClass="Button" customModule="Heart_Rate_Tracker" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="621" width="374" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="a8v-gD-iI8"/>
+                                        </constraints>
+                                        <state key="normal" title="Add"/>
+                                        <connections>
+                                            <action selector="addRecord:" destination="k0x-bh-GAm" eventType="touchUpInside" id="X6y-CE-lbP"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="7xM-Ne-uB6"/>
+                        <color key="backgroundColor" name="PrimaryColor"/>
+                        <constraints>
+                            <constraint firstItem="7xM-Ne-uB6" firstAttribute="bottom" secondItem="Fju-2E-OtW" secondAttribute="bottom" constant="10" id="7UX-6E-HNe"/>
+                            <constraint firstItem="Fju-2E-OtW" firstAttribute="top" secondItem="7xM-Ne-uB6" secondAttribute="top" constant="137" id="ARJ-a4-27O"/>
+                            <constraint firstItem="7xM-Ne-uB6" firstAttribute="trailing" secondItem="Fju-2E-OtW" secondAttribute="trailing" constant="20" id="Gib-ko-No5"/>
+                            <constraint firstItem="Fju-2E-OtW" firstAttribute="leading" secondItem="7xM-Ne-uB6" secondAttribute="leading" constant="20" id="aW3-sf-PDG"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ReS-2h-okz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="724.63768115942037" y="87.723214285714278"/>
+        </scene>
+        <!--Heart Rate History-->
+        <scene sceneID="2zV-nD-sKR">
+            <objects>
+                <viewController storyboardIdentifier="HeartRatesViewController" title="Heart Rate History" useStoryboardIdentifierAsRestorationIdentifier="YES" id="IaY-b7-lTj" customClass="HeartRatesViewController" customModule="Heart_Rate_Tracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hIB-JE-JBq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GNL-EQ-PPf">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cWd-uT-aXs">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <view key="tableFooterView" contentMode="scaleToFill" id="sog-hI-KbS">
+                                            <rect key="frame" x="0.0" y="136.00000034679067" width="414" height="44"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        </view>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="HeartRateTableViewCell" rowHeight="87" id="ODm-SH-cmT" customClass="HeartRateTableViewCell" customModule="Heart_Rate_Tracker" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="24.5" width="414" height="87"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ODm-SH-cmT" id="cBQ-Ja-Jhd">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="87"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="gkp-Vp-tZM">
+                                                            <rect key="frame" x="20" y="15" width="374" height="57"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="200" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bqg-bj-ytj">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="65" height="57"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="65" id="ymu-Yr-iL7"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="34"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6:30 PM, Tue Aug 10, 2021" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eOQ-tF-Q0F">
+                                                                    <rect key="frame" x="85" y="0.0" width="289" height="57"/>
+                                                                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="22"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="gkp-Vp-tZM" firstAttribute="leading" secondItem="cBQ-Ja-Jhd" secondAttribute="leading" constant="20" id="9Ne-4Z-gao"/>
+                                                        <constraint firstItem="gkp-Vp-tZM" firstAttribute="top" secondItem="cBQ-Ja-Jhd" secondAttribute="top" constant="15" id="Q1c-R4-dZc"/>
+                                                        <constraint firstAttribute="bottom" secondItem="gkp-Vp-tZM" secondAttribute="bottom" constant="15" id="Ubh-xN-w1H"/>
+                                                        <constraint firstAttribute="trailing" secondItem="gkp-Vp-tZM" secondAttribute="trailing" constant="20" id="bXk-LC-ard"/>
+                                                    </constraints>
+                                                </tableViewCellContentView>
+                                                <connections>
+                                                    <outlet property="HeartRate" destination="bqg-bj-ytj" id="jEL-oL-NKv"/>
+                                                    <outlet property="date" destination="eOQ-tF-Q0F" id="YwL-Mq-wKr"/>
+                                                </connections>
+                                            </tableViewCell>
+                                        </prototypes>
+                                        <connections>
+                                            <outlet property="dataSource" destination="IaY-b7-lTj" id="7YZ-M0-n1W"/>
+                                            <outlet property="delegate" destination="IaY-b7-lTj" id="fiV-Ak-uP3"/>
+                                        </connections>
+                                    </tableView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uGh-LU-bGX" customClass="FloatingButton" customModule="Heart_Rate_Tracker" customModuleProvider="target">
+                                        <rect key="frame" x="314" y="704" width="80" height="80"/>
+                                        <color key="backgroundColor" name="PrimaryColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="gze-oe-ZYd"/>
+                                            <constraint firstAttribute="width" secondItem="uGh-LU-bGX" secondAttribute="height" multiplier="1:1" id="nuW-t0-8gx"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="add"/>
+                                        <connections>
+                                            <action selector="takeHeartRate:" destination="IaY-b7-lTj" eventType="touchUpInside" id="GtW-JS-veH"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="cWd-uT-aXs" secondAttribute="bottom" id="IGn-Rg-LPG"/>
+                                    <constraint firstAttribute="bottom" secondItem="uGh-LU-bGX" secondAttribute="bottom" constant="24" id="cyK-Jh-Kxa"/>
+                                    <constraint firstAttribute="trailing" secondItem="cWd-uT-aXs" secondAttribute="trailing" id="g80-Rk-NIn"/>
+                                    <constraint firstItem="cWd-uT-aXs" firstAttribute="leading" secondItem="GNL-EQ-PPf" secondAttribute="leading" id="h0Q-Pm-B9H"/>
+                                    <constraint firstItem="cWd-uT-aXs" firstAttribute="top" secondItem="GNL-EQ-PPf" secondAttribute="top" id="hNz-ux-VUl"/>
+                                    <constraint firstItem="uGh-LU-bGX" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="GNL-EQ-PPf" secondAttribute="leading" constant="20" symbolic="YES" id="zp9-Tp-iuO"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="15Y-8X-nLA"/>
+                        <color key="backgroundColor" name="PrimaryColor"/>
+                        <constraints>
+                            <constraint firstItem="GNL-EQ-PPf" firstAttribute="leading" secondItem="15Y-8X-nLA" secondAttribute="leading" id="8ao-3y-vH9"/>
+                            <constraint firstItem="GNL-EQ-PPf" firstAttribute="top" secondItem="15Y-8X-nLA" secondAttribute="top" id="Uc3-Df-EMC"/>
+                            <constraint firstItem="15Y-8X-nLA" firstAttribute="trailing" secondItem="uGh-LU-bGX" secondAttribute="trailing" constant="20" id="bt1-kH-xRb"/>
+                            <constraint firstAttribute="bottom" secondItem="GNL-EQ-PPf" secondAttribute="bottom" id="c8v-fJ-YBG"/>
+                            <constraint firstItem="GNL-EQ-PPf" firstAttribute="trailing" secondItem="15Y-8X-nLA" secondAttribute="trailing" id="pfP-mD-NyI"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Your heart rates" largeTitleDisplayMode="always" id="u8W-Mn-Ghl">
+                        <barButtonItem key="rightBarButtonItem" title="logout" style="done" id="KJh-JL-ngl">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="logout:" destination="IaY-b7-lTj" id="JtR-6Q-fts"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="cWd-uT-aXs" id="pmx-gh-vjw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LLw-Zw-kLR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2157.971014492754" y="87.723214285714278"/>
+        </scene>
+        <!--Heart Rates Navigation Controller-->
+        <scene sceneID="x7k-lB-3Lz">
+            <objects>
+                <navigationController storyboardIdentifier="HeartRatesNavigationController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Au9-NV-59s" customClass="HeartRatesNavigationController" customModule="Heart_Rate_Tracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="VlF-KV-HOd">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" name="PrimaryColor"/>
+                        <color key="barTintColor" name="PrimaryColor"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="IaY-b7-lTj" kind="relationship" relationship="rootViewController" id="s5n-M5-x2N"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R7y-tf-lHZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1444.9275362318842" y="87.723214285714278"/>
         </scene>
     </scenes>
+    <resources>
+        <namedColor name="PrimaryColor">
+            <color red="1" green="0.55299997329711914" blue="0.61900001764297485" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
