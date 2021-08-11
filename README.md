@@ -20,7 +20,7 @@ The most common and seemingly effective approach (without dedicated sensors) wou
 
 ## Testing Strategy
 
-While not a large project there's still reason to test. Unit testing would be the foremost approach; being sure all validation and data is properly handled. Meeting requirements and being sure they work well together is a difficult task, so following would be integration tests to ensure all technical requirements are met.
+While not a large project there's still reason to test. Unit testing would be the foremost approach; being sure all validation and data is properly handled. Meeting requirements and being sure they work well together is a difficult task, so following would be integration tests to ensure all technical requirements are met. This starts to tie in with user scenario cases to test the application against what uses are likely to use the app for.
 
 ## Author Note
 
