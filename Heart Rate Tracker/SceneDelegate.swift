@@ -21,11 +21,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.rootViewController = viewController
 
         UIView.animate(withDuration: 0.3, animations: {
-           snapshot.layer.opacity = 0
-           snapshot.layer.transform = CATransform3DMakeScale(1.5, 1.5, 1.5)
-           }, completion: {
-             (value: Bool) in
-             snapshot.removeFromSuperview()
+            snapshot.layer.opacity = 0
+            snapshot.layer.transform = CATransform3DMakeScale(1.5, 1.5, 1.5)
+           }, completion: { _ in
+            snapshot.removeFromSuperview()
          })
 
         window?.rootViewController = viewController

@@ -18,8 +18,6 @@
 		62BA364926C21E5B0050013A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62BA364726C21E5B0050013A /* Main.storyboard */; };
 		62BA364B26C21E5B0050013A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62BA364A26C21E5B0050013A /* Assets.xcassets */; };
 		62BA364E26C21E5B0050013A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62BA364C26C21E5B0050013A /* LaunchScreen.storyboard */; };
-		62BA365926C21E5B0050013A /* Heart_Rate_TrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BA365826C21E5B0050013A /* Heart_Rate_TrackerTests.swift */; };
-		62BA366426C21E5B0050013A /* Heart_Rate_TrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BA366326C21E5B0050013A /* Heart_Rate_TrackerUITests.swift */; };
 		62BA367226C21E940050013A /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BA367126C21E940050013A /* Coordinator.swift */; };
 		62BA367426C22E810050013A /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BA367326C22E810050013A /* Button.swift */; };
 		62BA367626C22F5B0050013A /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BA367526C22F5B0050013A /* TextField.swift */; };
@@ -64,11 +62,7 @@
 		62BA364D26C21E5B0050013A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		62BA364F26C21E5B0050013A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		62BA365426C21E5B0050013A /* Heart Rate TrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Heart Rate TrackerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		62BA365826C21E5B0050013A /* Heart_Rate_TrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Heart_Rate_TrackerTests.swift; sourceTree = "<group>"; };
-		62BA365A26C21E5B0050013A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		62BA365F26C21E5B0050013A /* Heart Rate TrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Heart Rate TrackerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		62BA366326C21E5B0050013A /* Heart_Rate_TrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Heart_Rate_TrackerUITests.swift; sourceTree = "<group>"; };
-		62BA366526C21E5B0050013A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		62BA367126C21E940050013A /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		62BA367326C22E810050013A /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		62BA367526C22F5B0050013A /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
@@ -119,8 +113,6 @@
 			isa = PBXGroup;
 			children = (
 				62BA364026C21E5B0050013A /* Heart Rate Tracker */,
-				62BA365726C21E5B0050013A /* Heart Rate TrackerTests */,
-				62BA366226C21E5B0050013A /* Heart Rate TrackerUITests */,
 				62BA363F26C21E5B0050013A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -140,8 +132,8 @@
 			children = (
 				62BA364126C21E5B0050013A /* AppDelegate.swift */,
 				62BA364326C21E5B0050013A /* SceneDelegate.swift */,
-				62A4382026C3609C007FB39B /* HRT.xcdatamodeld */,
 				62BA367126C21E940050013A /* Coordinator.swift */,
+				62A4382026C3609C007FB39B /* HRT.xcdatamodeld */,
 				62BA364726C21E5B0050013A /* Main.storyboard */,
 				6249CD3D26C2D03400C63692 /* KeyboardLayoutConstraint.swift */,
 				62C2851C26C2D612004D9905 /* AppError.swift */,
@@ -153,24 +145,6 @@
 				62BA364F26C21E5B0050013A /* Info.plist */,
 			);
 			path = "Heart Rate Tracker";
-			sourceTree = "<group>";
-		};
-		62BA365726C21E5B0050013A /* Heart Rate TrackerTests */ = {
-			isa = PBXGroup;
-			children = (
-				62BA365826C21E5B0050013A /* Heart_Rate_TrackerTests.swift */,
-				62BA365A26C21E5B0050013A /* Info.plist */,
-			);
-			path = "Heart Rate TrackerTests";
-			sourceTree = "<group>";
-		};
-		62BA366226C21E5B0050013A /* Heart Rate TrackerUITests */ = {
-			isa = PBXGroup;
-			children = (
-				62BA366326C21E5B0050013A /* Heart_Rate_TrackerUITests.swift */,
-				62BA366526C21E5B0050013A /* Info.plist */,
-			);
-			path = "Heart Rate TrackerUITests";
 			sourceTree = "<group>";
 		};
 		62BA367926C280330050013A /* Components */ = {
@@ -352,7 +326,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				62BA365926C21E5B0050013A /* Heart_Rate_TrackerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,7 +333,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				62BA366426C21E5B0050013A /* Heart_Rate_TrackerUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

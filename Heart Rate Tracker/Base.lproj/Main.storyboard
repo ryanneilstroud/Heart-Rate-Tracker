@@ -99,40 +99,62 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="228" translatesAutoresizingMaskIntoConstraints="NO" id="Fju-2E-OtW">
-                                <rect key="frame" x="20" y="181" width="374" height="671"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Fju-2E-OtW">
+                                <rect key="frame" x="20" y="215" width="374" height="180"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's check that heart rate!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4N7-8d-t92">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="37"/>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="63" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Dm-72-FAd">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="90"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="72"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Smc-5c-dG8" customClass="Stepper" customModule="Heart_Rate_Tracker" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="265" width="374" height="128"/>
-                                    </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DDc-Dj-Kje" customClass="Button" customModule="Heart_Rate_Tracker" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="621" width="374" height="50"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="a8v-gD-iI8"/>
-                                        </constraints>
-                                        <state key="normal" title="Add"/>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="76" minValue="30" maxValue="200" translatesAutoresizingMaskIntoConstraints="NO" id="LPm-pw-htO">
+                                        <rect key="frame" x="-2" y="90" width="378" height="91"/>
+                                        <color key="tintColor" systemColor="systemPinkColor"/>
                                         <connections>
-                                            <action selector="addRecord:" destination="k0x-bh-GAm" eventType="touchUpInside" id="X6y-CE-lbP"/>
+                                            <action selector="sliderChanged:" destination="k0x-bh-GAm" eventType="valueChanged" id="LtQ-Oj-65i"/>
                                         </connections>
-                                    </button>
+                                    </slider>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="180" id="cWh-fC-ZJT"/>
+                                </constraints>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DDc-Dj-Kje" customClass="Button" customModule="Heart_Rate_Tracker" customModuleProvider="target">
+                                <rect key="frame" x="20" y="816" width="374" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="a8v-gD-iI8"/>
+                                </constraints>
+                                <state key="normal" title="Add"/>
+                                <connections>
+                                    <action selector="addRecord:" destination="k0x-bh-GAm" eventType="touchUpInside" id="X6y-CE-lbP"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's get that heart rate!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4N7-8d-t92">
+                                <rect key="frame" x="20" y="94" width="374" height="61"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="7xM-Ne-uB6"/>
                         <color key="backgroundColor" name="PrimaryColor"/>
                         <constraints>
-                            <constraint firstItem="7xM-Ne-uB6" firstAttribute="bottom" secondItem="Fju-2E-OtW" secondAttribute="bottom" constant="10" id="7UX-6E-HNe"/>
-                            <constraint firstItem="Fju-2E-OtW" firstAttribute="top" secondItem="7xM-Ne-uB6" secondAttribute="top" constant="137" id="ARJ-a4-27O"/>
+                            <constraint firstItem="7xM-Ne-uB6" firstAttribute="trailing" secondItem="4N7-8d-t92" secondAttribute="trailing" constant="20" id="2te-CR-J0l"/>
+                            <constraint firstItem="DDc-Dj-Kje" firstAttribute="top" relation="lessThanOrEqual" secondItem="Fju-2E-OtW" secondAttribute="bottom" constant="421" id="5gs-ss-38H"/>
+                            <constraint firstItem="7xM-Ne-uB6" firstAttribute="trailing" secondItem="DDc-Dj-Kje" secondAttribute="trailing" constant="20" id="Bsa-Or-xiv"/>
+                            <constraint firstItem="4N7-8d-t92" firstAttribute="top" secondItem="7xM-Ne-uB6" secondAttribute="top" constant="50" id="DsD-21-odb"/>
                             <constraint firstItem="7xM-Ne-uB6" firstAttribute="trailing" secondItem="Fju-2E-OtW" secondAttribute="trailing" constant="20" id="Gib-ko-No5"/>
+                            <constraint firstItem="Fju-2E-OtW" firstAttribute="top" secondItem="4N7-8d-t92" secondAttribute="bottom" constant="60" id="Jwf-4L-4j2"/>
+                            <constraint firstAttribute="bottom" secondItem="DDc-Dj-Kje" secondAttribute="bottom" constant="30" id="Las-aw-Q5L"/>
                             <constraint firstItem="Fju-2E-OtW" firstAttribute="leading" secondItem="7xM-Ne-uB6" secondAttribute="leading" constant="20" id="aW3-sf-PDG"/>
+                            <constraint firstItem="DDc-Dj-Kje" firstAttribute="leading" secondItem="7xM-Ne-uB6" secondAttribute="leading" constant="20" id="eXh-Xi-Asb"/>
+                            <constraint firstItem="4N7-8d-t92" firstAttribute="leading" secondItem="7xM-Ne-uB6" secondAttribute="leading" constant="20" id="j7a-2y-3SR"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="valueLabel" destination="7Dm-72-FAd" id="K1e-kl-GEJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ReS-2h-okz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -303,6 +325,9 @@
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

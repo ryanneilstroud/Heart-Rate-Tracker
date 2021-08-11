@@ -9,10 +9,16 @@ import UIKit
 
 class TakeHeartRateViewController: BaseViewController {
 
+    @IBOutlet private weak var valueLabel: UILabel!
     var submit: ((Int) -> Void)?
 
-    @IBAction func addRecord(_ sender: UIButton) {
-        submit?(Int.random(in: 40..<200))
+    @IBAction private func sliderChanged(_ sender: UISlider) {
+        
+        valueLabel.text = "\(Int(sender.value))"
+        
+    }
+    @IBAction private func addRecord(_ sender: UIButton) {
+        submit?(Int(valueLabel.text ?? "-1") ?? -1)
     }
     
     override func viewDidLoad() {

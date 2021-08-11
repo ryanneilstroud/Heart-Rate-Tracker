@@ -36,6 +36,8 @@ class Coordinator {
                 let alert = makeAlert(with: error)
                 vc?.present(alert, animated: true)
             }
+        } else {
+            setRootViewController(newHeartRate)
         }
     }
     
