@@ -12,7 +12,7 @@ class TakeHeartRateViewController: BaseViewController {
     var submit: ((Int) -> Void)?
 
     @IBAction func addRecord(_ sender: UIButton) {
-        submit?(10)
+        submit?(Int.random(in: 40..<200))
     }
     
     override func viewDidLoad() {

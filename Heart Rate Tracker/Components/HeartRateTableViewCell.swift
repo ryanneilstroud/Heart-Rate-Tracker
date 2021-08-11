@@ -8,18 +8,23 @@
 import UIKit
 
 class HeartRateTableViewCell: UITableViewCell {
-    @IBOutlet weak var HeartRate: UILabel!
-    @IBOutlet weak var date: UILabel!
+    @IBOutlet private weak var heartRateLabel: UILabel!
+    @IBOutlet private weak var dateLabel: UILabel!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
+    lazy private var dateFormatter: DateFormatter = {
+        let f = DateFormatter()
+        f.dateStyle = .medium
+        f.timeStyle = .short
+        return f
+    }()
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    var data: Heartrate? {
+        didSet {
+            heartRateLabel.text = "\(data?.heartrate ?? -1)"
+            
+            guard let date = data?.date else { return }
+            dateLabel.text = dateFormatter.string(from: date)
+        }
     }
 
 }

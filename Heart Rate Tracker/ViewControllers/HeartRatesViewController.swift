@@ -12,6 +12,7 @@ class HeartRatesViewController: BaseViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
+    var heartrates: [Heartrate] = []
     var takeHeartRate: Action?
     var logout: Action?
     
@@ -25,11 +26,15 @@ class HeartRatesViewController: BaseViewController {
 
 extension HeartRatesViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return heartrates.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: HeartRateTableViewCell.self), for: indexPath)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: HeartRateTableViewCell.self), for: indexPath) as? HeartRateTableViewCell else {
+            return UITableViewCell()
+        }
+        cell.data = heartrates[indexPath.row]
+        
         return cell
     }
 }

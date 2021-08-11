@@ -31,7 +31,7 @@ class API {
         let path = API.BASE_URL + Path.getHeartrates.value
     }
     
-    func postHeartrate() {
+    func postHeartrate(_ heartrate: Int) {
         
     }
     

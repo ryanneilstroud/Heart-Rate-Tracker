@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		6249CD3E26C2D03400C63692 /* KeyboardLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6249CD3D26C2D03400C63692 /* KeyboardLayoutConstraint.swift */; };
 		627D6B0D26C2B6B5000D8D3B /* Stepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627D6B0C26C2B6B5000D8D3B /* Stepper.swift */; };
+		62A4382226C3609C007FB39B /* HRT.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 62A4382026C3609C007FB39B /* HRT.xcdatamodeld */; };
+		62A4382826C36AC0007FB39B /* ModelHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A4382726C36AC0007FB39B /* ModelHelper.swift */; };
+		62A4382A26C3767D007FB39B /* UserDefaultsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A4382926C3767D007FB39B /* UserDefaultsHelper.swift */; };
 		62BA364226C21E5B0050013A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BA364126C21E5B0050013A /* AppDelegate.swift */; };
 		62BA364426C21E5B0050013A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BA364326C21E5B0050013A /* SceneDelegate.swift */; };
 		62BA364626C21E5B0050013A /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BA364526C21E5B0050013A /* LogInViewController.swift */; };
@@ -25,7 +28,6 @@
 		62BA368026C289840050013A /* HeartRatesNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BA367F26C289840050013A /* HeartRatesNavigationController.swift */; };
 		62BA368226C28E840050013A /* HeartRateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BA368126C28E840050013A /* HeartRateTableViewCell.swift */; };
 		62BA368426C298A10050013A /* FloatingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BA368326C298A10050013A /* FloatingButton.swift */; };
-		62BA368626C29C740050013A /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BA368526C29C740050013A /* API.swift */; };
 		62BA368826C2A8220050013A /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BA368726C2A8220050013A /* BaseViewController.swift */; };
 		62C2851D26C2D612004D9905 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C2851C26C2D612004D9905 /* AppError.swift */; };
 /* End PBXBuildFile section */
@@ -50,6 +52,9 @@
 /* Begin PBXFileReference section */
 		6249CD3D26C2D03400C63692 /* KeyboardLayoutConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardLayoutConstraint.swift; sourceTree = "<group>"; };
 		627D6B0C26C2B6B5000D8D3B /* Stepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stepper.swift; sourceTree = "<group>"; };
+		62A4382126C3609C007FB39B /* HRT.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HRT.xcdatamodel; sourceTree = "<group>"; };
+		62A4382726C36AC0007FB39B /* ModelHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelHelper.swift; sourceTree = "<group>"; };
+		62A4382926C3767D007FB39B /* UserDefaultsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsHelper.swift; sourceTree = "<group>"; };
 		62BA363E26C21E5B0050013A /* Heart Rate Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Heart Rate Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		62BA364126C21E5B0050013A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		62BA364326C21E5B0050013A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -72,7 +77,6 @@
 		62BA367F26C289840050013A /* HeartRatesNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartRatesNavigationController.swift; sourceTree = "<group>"; };
 		62BA368126C28E840050013A /* HeartRateTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartRateTableViewCell.swift; sourceTree = "<group>"; };
 		62BA368326C298A10050013A /* FloatingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingButton.swift; sourceTree = "<group>"; };
-		62BA368526C29C740050013A /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		62BA368726C2A8220050013A /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		62C2851C26C2D612004D9905 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -102,6 +106,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		62A4382B26C3769E007FB39B /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				62A4382926C3767D007FB39B /* UserDefaultsHelper.swift */,
+				62A4382726C36AC0007FB39B /* ModelHelper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		62BA363526C21E5B0050013A = {
 			isa = PBXGroup;
 			children = (
@@ -127,11 +140,12 @@
 			children = (
 				62BA364126C21E5B0050013A /* AppDelegate.swift */,
 				62BA364326C21E5B0050013A /* SceneDelegate.swift */,
+				62A4382026C3609C007FB39B /* HRT.xcdatamodeld */,
 				62BA367126C21E940050013A /* Coordinator.swift */,
-				62BA368526C29C740050013A /* API.swift */,
 				62BA364726C21E5B0050013A /* Main.storyboard */,
 				6249CD3D26C2D03400C63692 /* KeyboardLayoutConstraint.swift */,
 				62C2851C26C2D612004D9905 /* AppError.swift */,
+				62A4382B26C3769E007FB39B /* Helpers */,
 				62BA367A26C280400050013A /* ViewControllers */,
 				62BA367926C280330050013A /* Components */,
 				62BA364A26C21E5B0050013A /* Assets.xcassets */,
@@ -313,8 +327,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62A4382A26C3767D007FB39B /* UserDefaultsHelper.swift in Sources */,
 				62BA368826C2A8220050013A /* BaseViewController.swift in Sources */,
 				627D6B0D26C2B6B5000D8D3B /* Stepper.swift in Sources */,
+				62A4382226C3609C007FB39B /* HRT.xcdatamodeld in Sources */,
 				62BA367426C22E810050013A /* Button.swift in Sources */,
 				62BA367C26C284B30050013A /* HeartRatesViewController.swift in Sources */,
 				62C2851D26C2D612004D9905 /* AppError.swift in Sources */,
@@ -327,7 +343,7 @@
 				62BA364226C21E5B0050013A /* AppDelegate.swift in Sources */,
 				62BA364426C21E5B0050013A /* SceneDelegate.swift in Sources */,
 				62BA367826C2452F0050013A /* TakeHeartRateViewController.swift in Sources */,
-				62BA368626C29C740050013A /* API.swift in Sources */,
+				62A4382826C36AC0007FB39B /* ModelHelper.swift in Sources */,
 				62BA368426C298A10050013A /* FloatingButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -661,6 +677,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		62A4382026C3609C007FB39B /* HRT.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				62A4382126C3609C007FB39B /* HRT.xcdatamodel */,
+			);
+			currentVersion = 62A4382126C3609C007FB39B /* HRT.xcdatamodel */;
+			path = HRT.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 62BA363626C21E5B0050013A /* Project object */;
 }

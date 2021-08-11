@@ -12,6 +12,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
 
     private func setRootViewController(_ viewController: UIViewController?) {
+        
         guard let snapshot = window?.snapshotView(afterScreenUpdates: true) else {
             return
         }
