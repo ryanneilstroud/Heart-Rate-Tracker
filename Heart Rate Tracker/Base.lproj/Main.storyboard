@@ -99,18 +99,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Fju-2E-OtW">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="Fju-2E-OtW">
                                 <rect key="frame" x="20" y="215" width="374" height="180"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="63" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Dm-72-FAd">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="90"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="84"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="72"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="bpm" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nLT-3H-PLn">
+                                        <rect key="frame" x="0.0" y="84" width="374" height="16"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="16" id="qaX-dO-Vs8"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="76" minValue="30" maxValue="200" translatesAutoresizingMaskIntoConstraints="NO" id="LPm-pw-htO">
-                                        <rect key="frame" x="-2" y="90" width="378" height="91"/>
+                                        <rect key="frame" x="-2" y="100" width="378" height="81"/>
                                         <color key="tintColor" systemColor="systemPinkColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="7Sl-nB-140"/>
+                                        </constraints>
                                         <connections>
                                             <action selector="sliderChanged:" destination="k0x-bh-GAm" eventType="valueChanged" id="LtQ-Oj-65i"/>
                                         </connections>

@@ -91,6 +91,6 @@ class Coordinator {
     }
     
     private func viewController<T>(to type: T.Type) -> T? {
-        return storyboard.instantiateViewController(identifier: String(describing: type.self)) as? T
+        return storyboard.instantiateViewController(withIdentifier: String(describing: type.self)) as? T
     }
 }

@@ -12,23 +12,17 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
 
     private func setRootViewController(_ viewController: UIViewController?) {
+        guard let unwrappedWindow = window else { return }
         
-        guard let snapshot = window?.snapshotView(afterScreenUpdates: true) else {
-            return
-        }
-        viewController?.view.addSubview(snapshot)
+        unwrappedWindow.rootViewController = viewController
 
-        window?.rootViewController = viewController
-
-        UIView.animate(withDuration: 0.3, animations: {
-            snapshot.layer.opacity = 0
-            snapshot.layer.transform = CATransform3DMakeScale(1.5, 1.5, 1.5)
-           }, completion: { _ in
-            snapshot.removeFromSuperview()
-         })
-
-        window?.rootViewController = viewController
-        window?.makeKeyAndVisible()
+        UIView.transition(
+            with: unwrappedWindow,
+            duration: 0.3,
+            options: .transitionCrossDissolve,
+            animations: {},
+            completion: nil
+        )
     }
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
